@@ -1,0 +1,2 @@
+# Sistema Embebido
+En este subdirectorio se encontrará el código para Arduino
