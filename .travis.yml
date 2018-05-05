@@ -10,7 +10,7 @@ matrix:
         - sudo mv arduino-1.8.5 /usr/local/share/arduino
         - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
       script:
-        - arduino --verify --board arduino:avr:mega:cpu=atmega2560 $TRAVIS_BUILD_DIR/sistema-embebido/arduino.ino
+        - arduino --verify --board arduino:avr:mega:cpu=atmega2560 $TRAVIS_BUILD_DIR/sistema-embebido/sistema-embebido.ino
 notifications:
   email:
     on_success: always
