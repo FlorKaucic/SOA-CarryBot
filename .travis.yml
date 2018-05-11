@@ -1,6 +1,12 @@
-matrix:
+jobs:
   include:
-    - language: c
+    - stage: commit
+      language: generic  
+      script:
+        - "export TRAVIS_COMMIT_MSG=\"$(git log -n 1 --pretty=format:%s)\""
+        - ( [[ $TRAVIS_COMMIT_MSG =~ ^\[(repo|ardu|andr|docs)\]\ ([a-zA-Z0-9\ \(\)]*)$ ]] && { GREEN='\033[0;83.'; NOCOLOR='\033[0m'; echo -e "${GREEN}Commit message matches pattern.${NOCOLOR}\n" ) || { RED='\033[0;210m'; NOCOLOR='\033[0m'; echo -e "${RED}Commit message DOES NOT match pattern!${NOCOLOR}\n"; exit -1; }
+    - stage: arduino
+      language: c
       install:
         - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16" 
         - sleep 3
@@ -11,6 +17,9 @@ matrix:
         - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
       script:
         - arduino --verify --board arduino:avr:mega:cpu=atmega2560 $TRAVIS_BUILD_DIR/sistema-embebido/sistema-embebido.ino
+branches:
+  only: 
+    - master
 notifications:
   email:
     on_success: always
