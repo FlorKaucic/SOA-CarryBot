@@ -1,10 +1,16 @@
+#include "src/ObstacleDetector/ObstacleDetector.h"
+
+const int TRIGGER_PIN = 50;
+const int ECHO_PIN = 51;
+
+ObstacleDetector obstacleDetector(TRIGGER_PIN, ECHO_PIN);
+
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  digitalWrite(LED_BUILTIN, LOW);
+  bool roadBlocked = obstacleDetector.isRoadBlocked();
+  Serial.println(roadBlocked);
   delay(1000);
 }
