@@ -3,7 +3,7 @@ jobs:
     - stage: commit
       language: generic  
       script:
-        - "export TRAVIS_COMMIT_MSG=\"$([ $TRAVIS_PULL_REQUEST == \"false\" ] && git log -n 1 --pretty=format:%s || git log -n 1 --skip=1 --pretty=format:%s)\""
+        - "export TRAVIS_COMMIT_MSG=\"$(git log -n 1 --skip=1 --pretty=format:%s)\""
         - echo $TRAVIS_COMMIT_MSG
         - ( [[ $TRAVIS_COMMIT_MSG =~ ^\[(repo|ardu|andr|docs)\]\ ([a-zA-Z0-9\ \(\)]*)$ ]] && echo "Commit message matches pattern" ) || { echo "Commit message DOES NOT match pattern"; exit -1; } 
     - stage: arduino
