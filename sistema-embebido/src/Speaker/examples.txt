@@ -1,0 +1,20 @@
+**** Eine Kleine Nachtmusik - Mozart ****
+
+const int numberOfNotes = 11;
+const int myNotes[] = {
+  NOTE_G2, 0, NOTE_D2, NOTE_G2, 0, NOTE_D2, NOTE_G2, NOTE_D2, NOTE_G2, NOTE_B2, NOTE_D3
+};
+const int myNoteDurations[] = {
+  4, 4, 8, 4, 8, 8, 8, 8, 8, 8, 4
+};
+
+
+**** Arduino Example Tune ****
+
+const int numberOfNotes = 8
+const int myNotes[] = {
+  NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4
+}
+const int myNoteDurations[] = {
+  4, 8, 8, 4, 4, 4, 4, 4
+};
