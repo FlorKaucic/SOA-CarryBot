@@ -1,6 +1,7 @@
 #include "src/ObstacleDetector/ObstacleDetector.h"
 #include "src/CarControl/CarControl.h"
 #include "src/LED/LED.h"
+#include "src/Bluetooth/BTHandler/BTHandler.h"
 
 const int TRIGGER_PIN = 50;
 const int ECHO_PIN = 51;
