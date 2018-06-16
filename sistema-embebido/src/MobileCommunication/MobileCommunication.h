@@ -27,25 +27,25 @@ class MobileCommunication
 {
 	public:
 		MobileCommunication(const int btVccPin,  const int btEnablePin);
+		void start(void);
 		void send(String message);
 		void send(int message);
 		void send(bool message);
 		void send(char message);
+		const static int CONFIG_BAUD_RATE = 38400;
+		const static int COMM_BAUD_RATE = 9600;
 
 	private:
 		int _btVccPin;
 		int _btEnablePin;
-		void _start(void);
 		void _clearBuffer(void);
-		const static int CONFIG_BAUD_RATE = 38400;
-		const static int COMM_BAUD_RATE = 9600;
-		const static int MICRODELAY = 20;
-		const char INIT[9] = {'A', 'T', '+', 'I', 'N', 'I', 'T', '\r', '\n'};
-		const char ROLE[11] = {'A', 'T', '+', 'R', 'O', 'L', 'E', '=', '0', '\r', '\n'};
-		const char CLASS[12] = {'A', 'T', '+', 'C', 'L', 'A', 'S', 'S', '=', '0', '\r', '\n'};
-		const char NAME[23] = {'A', 'T', '+', 'N', 'A', 'M', 'E', '=', 'C', 'A', 'R', 'R', 'Y', 'B', 'O', 'T', '-', 'C', 'O', 'M', 'M', '\r', '\n'};
-		const char BAUD_RATE[18] = {'A', 'T', '+', 'U', 'A', 'R', 'T', '=', '9', '6', '0', '0', ',', '1', ',', '2', '\r', '\n'};
-		const char RESTORE[9] = {'A', 'T', '+', 'O', 'R', 'G', 'L', '\r', '\n'};
+		const static int SMALL_DELAY = 200;
+		const String INIT = "AT+INIT\r\n";
+		const String ROLE = "AT+ROLE=0\r\n";
+		const String CLASS = "AT+CLASS=0\r\n";
+		const String BAUD_RATE = "AT+UART=9600,1,2\r\n";
+		const String RESTORE = "AT+ORGL\r\n";
+		const String NAME = "AT+NAME=PEPEBOT\r\n";
 
 };
 #endif //CARRYBOT_MOBILECOMMUNICATION_H

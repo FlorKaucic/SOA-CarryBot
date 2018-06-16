@@ -35,12 +35,26 @@ CarControl carControl(LEFT_MOTOR_CLOCKWISE_PIN,
 
 LED led(LED_PIN);
 
+const int TERMINAL_BAUD_RATE = 9600;
+const int COMM_BAUD_RATE = 9600;
+const int CONFIG_BAUD_RATE = 9600;
+
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(TERMINAL_BAUD_RATE);
+  Serial3.begin(CONFIG_BAUD_RATE);
+  mobile.start();
+  Serial3.begin(COMM_BAUD_RATE);
+  String message = "";
+  while(message != "CONNECTED\r\n") {
+    if(Serial3.available()) {
+      message = Serial3.readString();
+    }
+  }
 }
 
 void loop() {
   bool roadBlocked = obstacleDetector.isRoadBlocked();
+  Serial.println(roadBlocked);
   mobile.send(roadBlocked);
   delay(1000);
 }

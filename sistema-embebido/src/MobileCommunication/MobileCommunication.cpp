@@ -12,43 +12,43 @@ MobileCommunication::MobileCommunication(const int btVccPin, const int btEnableP
 
 	pinMode(this->_btVccPin, OUTPUT);
 	pinMode(this->_btEnablePin, OUTPUT);
-
-	this->_start();
 }
 
-void MobileCommunication::_start() {
+void MobileCommunication::start() {
 	digitalWrite(this->_btVccPin, LOW);
-	delay(MICRODELAY);
+	delay(SMALL_DELAY);
 	digitalWrite(this->_btEnablePin, HIGH);
+	delay(SMALL_DELAY);
 	digitalWrite(this->_btVccPin, HIGH);
-	delay(MICRODELAY);
+
+	delay(1000);
+
+	Serial3.print(RESTORE);
+	this->_clearBuffer();
+	Serial3.print(NAME);
+	this->_clearBuffer();
+	Serial3.print(CLASS);
+	this->_clearBuffer();
+	Serial3.print(ROLE);
+	this->_clearBuffer();
+	Serial3.print(BAUD_RATE);
+	this->_clearBuffer();
+	Serial3.print(INIT);
+	this->_clearBuffer();
+
+	delay(700);
+
 	digitalWrite(this->_btEnablePin, LOW);
-
-	Serial3.begin(CONFIG_BAUD_RATE);
-	Serial3.write(RESTORE);
-	this->_clearBuffer();
-	Serial3.write(NAME);
-	this->_clearBuffer();
-	Serial3.write(CLASS);
-	this->_clearBuffer();
-	Serial3.write(ROLE);
-	this->_clearBuffer();
-	Serial3.write(BAUD_RATE);
-	this->_clearBuffer();
-	Serial3.write(INIT);
-	this->_clearBuffer();
-
 	digitalWrite(this->_btVccPin, LOW);
-	delay(MICRODELAY);
+	delay(SMALL_DELAY);
 	digitalWrite(this->_btVccPin, HIGH);
-	delay(MICRODELAY);
-
-	Serial3.begin(COMM_BAUD_RATE);
+	delay(SMALL_DELAY);
 }
 
 void MobileCommunication::_clearBuffer() {
-	while(Serial3.available()) {
-		Serial3.read();
+	delay(250);
+	if(Serial3.available()) {
+		Serial.print((String)Serial3.readString());
 	}
 }
 
