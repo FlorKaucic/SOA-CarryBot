@@ -1,39 +1,29 @@
 #ifndef BTPARSER_H
 #define BTPARSER_H
 
-
 #include <string.h>
-#include <stdio.h>
+#include "Arduino.h"
+#include <ArduinoSTL.h>
 
 using namespace std;
 
+const int EQUAL = 0;
+
 typedef struct {
-
-    char    address[20];
-    char    hex_rssi[10];
-    int     dec_rssi;
-
+  char    address[20];
+  int     dec_rssi;
 } t_medicion;
 
 typedef enum {
-		
-		EMPTY_MSG		= -1,
-		NO_ARRAY_ALLOC	= -2,
-		CORRUPTED_MSG	= -3
-		
-
+	EMPTY_MSG	      = -1,
+	NO_ARRAY_ALLOC  = -2,
+	CORRUPTED_MSG   = -3
 } e_parsing_err;
 
 class BTParser
 {
-    public:
-
-        static int parse(char* , t_medicion* );
-
-    private:
-
-        // Removido todo lo private
-
+  public:
+    static int parse(char* , t_medicion*);
 };
 
 #endif // BTPARSER_H
