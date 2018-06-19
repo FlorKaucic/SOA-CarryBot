@@ -51,7 +51,11 @@ class TunePlayer
     TunePlayer(const int speakerPin);
     void setTune(const int * notes, const int * noteDurations, const int numberOfNotes);
     void playTune(void);
-
+	void setTune1();
+	void setTune2();
+	void setTune3();
+	void setTune4();
+	void setTune5();
   private:
     int _speakerPin;
     int _numberOfNotes;
