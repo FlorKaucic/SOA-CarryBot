@@ -5,7 +5,8 @@
 */
 
 #include "Arduino.h"
-#include "TunePlayer.h"
+#include "../Speaker/TunePlayer.h"
+#include "Notes.h"
 
 TunePlayer::TunePlayer(const int speakerPin) {
   _speakerPin = speakerPin;
