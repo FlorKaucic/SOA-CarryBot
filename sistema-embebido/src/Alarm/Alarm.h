@@ -17,26 +17,38 @@
 #ifndef Alarm_h
 #define Alarm_h
 
+#include "Arduino.h"
+#include "../Speaker/TunePlayer.h"
+#include "../Speaker/Notes.h"
+
 class Alarm
 {
 	public:
 		Alarm(int speakerPin);
+		void arrival(void);
+		void error(void);
 		void alert(void);
-                void beep(void);
-                void error(void);
+		void connected(void);
+		void disconnected(void);
 
 	private:
 		int _speakerPin;
-		TunePlayer _tunePlayer;
-		const int ALERT_SIZE = 11;
-		const int ALERT_NOTES[] = {
-                  NOTE_G2, 0, NOTE_D2, NOTE_G2,
-                  0, NOTE_D2, NOTE_G2, NOTE_D2,
-                  NOTE_G2, NOTE_B2, NOTE_D3
-		};
-		const int ALERT_DURATIONS[] = {
-		  4, 4, 8, 4, 8, 8, 8, 8, 8, 8, 4
-		};
+		TunePlayer * _tunePlayer;
+		const int ARRIVAL_SIZE = 5;
+		const int ARRIVAL_NOTES[5] = {NOTE_F4, NOTE_C4, NOTE_C4, NOTE_D4, NOTE_C4};
+		const int ARRIVAL_DURATIONS[5] = {4, 8, 8, 4, 4};
+		const int ERROR_SIZE = 2;
+		const int ERROR_NOTES[2] = {NOTE_E6, NOTE_E6};
+		const int ERROR_DURATIONS[2] = {2, 1};
+		const int ALERT_SIZE = 2;
+		const int ALERT_NOTES[2] = {NOTE_E5, NOTE_A4};
+		const int ALERT_DURATIONS[2] = {4, 4};
+		const int CONNECTED_SIZE = 3;
+		const int CONNECTED_NOTES[3] = {NOTE_A5, NOTE_C6, NOTE_E6};
+		const int CONNECTED_DURATIONS[3] = {16, 16, 16};
+		const int DISCONNECTED_SIZE = 3;
+		const int DISCONNECTED_NOTES[3] = {NOTE_E6, NOTE_C6, NOTE_A5};
+		const int DISCONNECTED_DURATIONS[3] = {16, 16, 16};
 };
 
 #endif
