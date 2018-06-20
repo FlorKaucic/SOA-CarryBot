@@ -29,7 +29,8 @@ typedef enum {
 	MEM_NOT_ALLOCATED = -2,
 	MODULE_NOT_SET = -4,
 	ADDRESS_NOT_FOUND = 0,
-	OBJECT_NOT_FOUND = -1
+	OBJECT_NOT_FOUND = -1,
+	EMPTY_MSG = -5
 } e_generic_returns;
 
 typedef enum {

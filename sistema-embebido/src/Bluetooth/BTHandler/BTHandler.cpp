@@ -30,7 +30,6 @@ int BTHandler::set_inqm_max_mediciones(const int inqm_max_med) {
 	this->module_status = MODULE_SET_PENDING;
 	this->inqm_max_mediciones = inqm_max_med;
 	this->mediciones = new t_medicion[inqm_max_med];
-	this->mediciones = new t_medicion[inqm_max_med];
 
 	if (!this->mediciones) {
 		return MEM_NOT_ALLOCATED;
@@ -225,11 +224,9 @@ int BTHandler::set_module() { // Prepara el modulo para realizar mediciones.
 /**
 
 	Retorno:
-	int	- >=0											->	Nº de mediciones parseadas.
-				-1 (EMPTY_MSG)					-> 	El Mensaje estaba vacio
-				-2 (MEM_NOT_ALLOCATED)	->	this->mediciones == null o no se pudo pedir memoria
+	int	- >=0								->	Nº de mediciones parseadas.
+				-5 (EMPTY_MSG)				-> 	El Mensaje estaba vacio
 				-3 (CORRUPTED_MSG)			->	El mensaje estaba incompleto.
-				-4 (MODULE_NOT_SET)			->  si this->module_status != AT_INQM_SET
 
 */
 int BTHandler::at_inq() {

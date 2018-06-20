@@ -15,7 +15,6 @@ typedef struct {
 } t_medicion;
 
 typedef enum {
-	EMPTY_MSG	      = -1,
 	NO_ARRAY_ALLOC  = -2,
 	CORRUPTED_MSG   = -3
 } e_parsing_err;
