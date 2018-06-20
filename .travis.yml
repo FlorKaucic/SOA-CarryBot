@@ -3,10 +3,12 @@ jobs:
     - stage: commit
       language: generic  
       script:
-        - "export TRAVIS_COMMIT_MSG=\"$(git log -n 1 --skip=1 --pretty=format:%s)\""
-        - echo $TRAVIS_COMMIT_MSG
-        - ( [[ $TRAVIS_COMMIT_MSG =~ ^\[(repo|ardu|andr|docs)\]\ ([a-zA-Z0-9\ \(\)]*)$ ]] && echo "Commit message matches pattern" ) || { echo "Commit message DOES NOT match pattern"; exit -1; } 
+        - "export COMMIT_MESSAGE=\"$(git log -n 1 --skip=1 --pretty=format:%s)\""
+        - echo $COMMIT_MESSAGE
+        - ( [[ $COMMIT_MESSAGE =~ ^\[(repo|ardu|andr|docs|phpc)\]\ ([a-zA-Z0-9\ \(\)]*)$ ]] && echo "Commit message matches pattern" ) || { echo "Commit message DOES NOT match pattern"; exit -1; }
+        - export COMMIT_SCOPE=`echo $COMMIT_MESSAGE | awk '{print substr($0,0,6)}'`
     - stage: arduino
+      if: env(COMMIT_SCOPE) = [ardu]
       language: c
       install:
         - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16" 
