@@ -1,11 +1,11 @@
-# Sistema Embebido
+﻿# Sistema Embebido
 En este subdirectorio se encontrará el código para Arduino para un robot que lleva objetos hacia la persona correspondiente, siguiente la señal de bluetooth emitida por su teléfono.
 
 ## Preparación
 
 ### Componentes
 - 1 x Arduino Mega 2560
-- 1 x Módulo Bluetooth HC-05
+- 2 x Módulo Bluetooth HC-05
 - 1 x Módulo de Sensor Ultrasónico HC-SR04
 - 1 x CI Puente-H L293D
 - 1 x Transistor LM7805 (regulador de voltaje con salida de 5v)

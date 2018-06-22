@@ -42,6 +42,7 @@ class BTHandler {
 	public:
 		BTHandler(HardwareSerial *);
 		int get_average_reading_for_address(const char *);
+		int get_mode_value_reading_for_address(const char *);
 		int get_inqm_max_mediciones();
 		int get_inqm_timeout();
 		int get_module_status();

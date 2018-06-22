@@ -151,6 +151,7 @@ int BTHandler::at_inqm() {
 	String reply = "";
 	char buffer[21];
 
+
 	String msg = "AT+INQM=";
 	msg += "1,";
 	itoa(this->inqm_max_mediciones, buffer, 10);
@@ -265,20 +266,104 @@ int BTHandler::get_average_reading_for_address(const char * address) {
 	}
 
 	int number_of_reading_values = 0;
-	int sum_of_reading_values = 0;
+	int average_noise_level = 0;
 	int i = 0;
 
 	while(i < inqm_max_mediciones) {
+		Serial.print("i:");
+		Serial.println(i);
+		Serial.print("address:");
+		Serial.println(mediciones[i].address);
+		Serial.print("rssi:");
+		Serial.println(mediciones[i].dec_rssi);
 		if(!strcmp(address, mediciones[i].address)) {
-			sum_of_reading_values += mediciones[i].dec_rssi;
 			number_of_reading_values++;
+			if(number_of_reading_values > 1) {
+				average_noise_level = (average_noise_level + mediciones[i].dec_rssi) / 2;
+			} else {
+				average_noise_level = mediciones[i].dec_rssi;
+			}
 		}
 		i++;
+		Serial.print("avr:");
+		Serial.print(average_noise_level);
 	}
 
 	if(!number_of_reading_values) {
 		return ADDRESS_NOT_FOUND;
 	}
 
-	return sum_of_reading_values / number_of_reading_values;
+	return average_noise_level;
 }
+
+
+/**
+ * Receives an address and returns the mode of the values obtained by inquiring RSSI values
+ * @param address - pointer to a char array with the address to look for (formatted as NAP:UAP:LAP)
+ * @return an integer for the mode value reading
+ */
+int BTHandler::get_mode_value_reading_for_address(const char * address) {
+	if (!this->mediciones) {
+		return OBJECT_NOT_FOUND;
+	}
+	int mode_arr[inqm_max_mediciones][2];
+	int i = 0, med,cantMeds = 0, nuevos = 0, subiterator = 0, corte = 0, moda=-1, cantModa;
+	
+	for(i=0;i<inqm_max_mediciones;i++){
+		mode_arr[i][0] = 0;
+		mode_arr[i][1] = 0;
+	}	
+	
+	
+	for( i = 0 ; i < inqm_max_mediciones ; i++)
+	{
+		Serial.println("(BTHandler) Comparo valor de mi address: ");
+		Serial.println(address);
+		Serial.println("(BTHandler) Comparo con la address solicitada: ");
+		Serial.println(mediciones[i].address);
+		if ( !strcmp(address, mediciones[i].address) )
+		{
+			Serial.println("(BTHandler) new medicion");
+			med = mediciones[i].dec_rssi;
+			cantMeds++;
+			subiterator = 0;
+			corte = 0;
+			while( corte == 0 && subiterator < nuevos )
+			{
+				
+				if ( mode_arr[subiterator][0] == med ){
+					mode_arr[subiterator][1]++;
+					corte = 1;
+				}
+				subiterator++;
+				
+			}
+			if(corte == 0){	
+				mode_arr[nuevos][0] = med;
+				mode_arr[nuevos][1] = 1;
+				nuevos++;
+			}
+		}
+		
+	}
+	
+	for(i=0;i<nuevos;i++){
+		if(i==0){
+			moda = mode_arr[i][0];
+			cantModa = mode_arr[i][1];
+		}
+		else{
+			if(cantModa < mode_arr[i][1]){
+				moda = mode_arr[i][0];
+				cantModa = mode_arr[i][1];
+			}
+		}
+	}
+	if(cantMeds == 0) {
+		return ADDRESS_NOT_FOUND;
+	}
+	
+	return moda;	
+	
+}
+

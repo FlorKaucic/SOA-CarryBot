@@ -1,0 +1,253 @@
+[33mcommit 45021c4304627d031f91cf7429edc3498e92a993[m[33m ([m[1;36mHEAD -> [m[1;32mintegration[m[33m)[m
+Author: Facundo Bistolfi <fbistolfi@circostudio.com>
+Date:   Sun Jul 15 18:00:43 2018 -0300
+
+    wip
+
+[33mcommit ee8a9d9b63f3f18c35a6223d6c8cde6c0958c173[m
+Author: Facundo Bistolfi <fbistolfi@circostudio.com>
+Date:   Tue Jul 10 10:17:49 2018 -0300
+
+    [ardu] add bt serial3 com
+
+[33mcommit 2122e5b38410714542c473295aa5028f1ef747f3[m[33m ([m[1;31morigin/integration[m[33m)[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri Jun 22 19:36:54 2018 -0300
+
+    [ardu] INTEGRACION
+
+[33mcommit 673cb2715b7f88e7df5950a64756309b1bf910a9[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: 5474971 a29f091
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Wed Jun 20 19:39:18 2018 -0300
+
+    Merge pull request #15 from FlorKaucic/bt-lib
+    
+    BT Handler && BT Parser
+
+[33mcommit a29f09197f1cd794a65c68336525da77b4b2d071[m
+Author: JJProgram <juanjopalopoli@hotmail.com>
+Date:   Wed Jun 20 17:34:05 2018 -0300
+
+    [ardu] Retornos por error y clear de archivos
+    
+    Removido contenido innecesario, y agregados retornos por error al parser.
+
+[33mcommit 1643cc7ebb07f2cf607abfda6eb94563e21afc51[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Mon Jun 18 14:27:35 2018 -0300
+
+    [ardu] Segunda version de BTHandler y BTParser (andando)
+
+[33mcommit 3f3d2caea9395f815de762e54fa0bbd370b457cf[m
+Author: JJProgram <juanjopalopoli@hotmail.com>
+Date:   Sun May 27 15:26:24 2018 -0300
+
+    [ardu] Agrega la primera versión de BTHandler y BTParser
+
+[33mcommit 54749710aa446efc89f43312d88858d09090610c[m
+Merge: 06a5a65 a52b868
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Tue Jun 19 18:57:45 2018 -0300
+
+    Merge pull request #16 from FlorKaucic/alarm-lib
+    
+    Alarm library
+
+[33mcommit a52b868cfa6f1a16230a3435eef99e0ec6ee906d[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Tue Jun 19 18:21:59 2018 -0300
+
+    [ardu] metodos con id del sonido y pasados a Alarm
+
+[33mcommit 1c2d4fda2758592d71aefff40a55cef93db133d3[m
+Author: facundorbistolfi <38884777+facundorbistolfi@users.noreply.github.com>
+Date:   Tue Jun 19 16:26:15 2018 -0300
+
+    [ardu] Agregados los sonidos para el speaker
+
+[33mcommit a81e8541421bce079519f20f485d381ff3f6623a[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 25 01:47:24 2018 -0300
+
+    [ardu] estructura para controlador de alarma
+
+[33mcommit 06a5a65f0f900babc1a424af1302c549ec29dccf[m
+Merge: b7f2527 bfa2a1d
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Sat Jun 2 02:21:29 2018 -0300
+
+    Merge pull request #13 from FlorKaucic/motor-lib
+    
+    [ardu] agrega libreria para controlar el movimiento
+
+[33mcommit bfa2a1d93a5c97942cd90155a21b15aa66b949d3[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri Jun 1 02:35:16 2018 -0300
+
+    [ardu] agrega libreria para controlar el movimiento
+
+[33mcommit b7f2527e647e2c9a932c98942b0f94438debd26c[m
+Merge: e8599c8 5606bb6
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Sat Jun 2 01:49:20 2018 -0300
+
+    Merge pull request #14 from FlorKaucic/LED-lib
+    
+    [ardu] agrega libreria para manejar LED con PWM
+
+[33mcommit 5606bb6c57789948d86a18b3fb983536a92b1606[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri Jun 1 04:18:23 2018 -0300
+
+    [ardu] agrega libreria para manejar LED con PWM
+
+[33mcommit e8599c8da305e3a44b9a563b53cd5952323a32da[m
+Merge: a454f27 4a388b7
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Sat Jun 2 01:37:07 2018 -0300
+
+    Merge pull request #12 from FlorKaucic/kalman-lib
+    
+    [ardu] agrega libreria de Kalman filter para 1D
+
+[33mcommit 4a388b7135936338702d12cb9fa4ebbd3c78f550[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Wed May 30 17:57:29 2018 -0300
+
+    [ardu] agrega libreria de Kalman filter para 1D
+
+[33mcommit a454f272b7c5c01d6ead0ad4cdd2cd3a82bee421[m
+Merge: 19c1f6a 388325f
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 25 01:58:22 2018 -0300
+
+    Merge pull request #10 from FlorKaucic/speaker-lib
+    
+    [ardu] agrega libreria para parlante
+
+[33mcommit 388325f77e1517f31b777b7d92b14d08f5bcb492[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Sat May 12 04:20:11 2018 -0300
+
+    [ardu] agrega libreria para parlante
+
+[33mcommit 19c1f6a17a7e7ebf1bf6e4927bac7097cf5301d1[m
+Merge: 951f424 faf3b49
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Sat May 12 01:08:05 2018 -0300
+
+    Merge pull request #4 from FlorKaucic/ultrasonic-lib
+    
+    [ardu] agrega libreria de deteccion de obstaculos
+
+[33mcommit faf3b491a4b7230b17646b7bffb04bb78b3c803b[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 04:53:30 2018 -0300
+
+    [ardu] agrega libreria de deteccion de obstaculos
+
+[33mcommit 951f424255009f53ef2245d33fd2ad3766a2500d[m
+Merge: 9bdafd6 82eff15
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 22:31:21 2018 -0300
+
+    Merge pull request #9 from FlorKaucic/CI
+    
+    [repo] fix para agarrar el segundo commit en master
+
+[33mcommit 82eff155b9c45abcff69c31e7e9582d96179d228[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 22:28:47 2018 -0300
+
+    [repo] fix para agarrar el segundo commit en master
+
+[33mcommit 9bdafd680516667dd3f3d1b4d9bfc70ce4701e18[m
+Merge: 48177ef 5c931df
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 22:25:35 2018 -0300
+
+    Merge pull request #8 from FlorKaucic/CI
+    
+    [repo] agrega hook para validar mensaje de commit
+
+[33mcommit 5c931df7ccd4ee4c665ed629b320aacb278ef3b5[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 16:12:18 2018 -0300
+
+    [repo] agrega hook para validar mensaje de commit
+
+[33mcommit 48177efe034e9e55f70fa8ff6c9752f1487f15ed[m
+Merge: 710fbb0 1e4f0b0
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 21:33:36 2018 -0300
+
+    Merge pull request #7 from FlorKaucic/revert-6-CI
+    
+    Revert "[repo] agrega hook para validar mensaje de commit"
+
+[33mcommit 1e4f0b0a2973ef880df156b09135dcad514ef208[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 21:33:17 2018 -0300
+
+    Revert "[repo] agrega hook para validar mensaje de commit"
+
+[33mcommit 710fbb04fb7d78e2b2ae14ab99b04cb70140ac20[m
+Merge: e9b84e1 0dafc88
+Author: JJProgram <juanjopalopoli@hotmail.com>
+Date:   Fri May 11 21:30:31 2018 -0300
+
+    Merge pull request #6 from FlorKaucic/CI
+    
+    [repo] agrega hook para validar mensaje de commit
+
+[33mcommit 0dafc88a4753bfe8657fd16b2508396494c72f06[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Fri May 11 16:12:18 2018 -0300
+
+    [repo] agrega hook para validar mensaje de commit
+
+[33mcommit e9b84e1faa6217b019816579b2baa00f982b678e[m
+Merge: af8a972 943f546
+Author: JJProgram <juanjopalopoli@hotmail.com>
+Date:   Sat May 5 20:37:46 2018 -0300
+
+    Merge pull request #3 from FlorKaucic/rename
+    
+    [repo] cambia nombre del sketch al de la carpeta
+
+[33mcommit 943f546bdd67a9e433d18b7d9b8fab155a90e585[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Sat May 5 20:24:15 2018 -0300
+
+    [repo] cambia nombre del sketch al de la carpeta
+    
+    Cambia el nombre del archivo de codigo Arduino (.ino) para que coincida con el de la carpeta, para que al abrir el sketch en el IDE de Arduino, no falle ni genereuna nueva carpeta.
+    Actualiza el yml para TravisCI para que compile sistema-embebido.ino
+
+[33mcommit af8a9722439917371c6661e6ebc756b0a4403152[m
+Merge: 3dd0acc 041e1d2
+Author: JJProgram <juanjopalopoli@hotmail.com>
+Date:   Sat May 5 20:13:03 2018 -0300
+
+    Merge pull request #2 from FlorKaucic/README
+    
+    [repo] actualiza los README con info del proyecto
+
+[33mcommit 041e1d20911c6673bcbc817c7e7c5797e0c286c0[m
+Author: Flor Kaucic <florkaucic@gmail.com>
+Date:   Sat May 5 15:42:04 2018 -0300
+
+    [repo] actualiza los README con info del proyecto
+
+[33mcommit 3dd0acc9bd9d749ea322878c589ebe5009a4cbee[m
+Merge: ef58886 e7ca945
+Author: facundorbistolfi <38884777+facundorbistolfi@users.noreply.github.com>
+Date:   Sat May 5 11:56:22 2018 -0300
+
+    Merge pull request #1 from FlorKaucic/CI
+    
+    [repo] estructura y TravisCI para compilar Arduino
+
+[33mcommit e7ca945a550e7fcc5082f6529e26b99f15609073[m
+Author: Flor Kaucic <florka
