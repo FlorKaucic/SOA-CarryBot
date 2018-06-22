@@ -151,6 +151,7 @@ int BTHandler::at_inqm() {
 	String reply = "";
 	char buffer[21];
 
+
 	String msg = "AT+INQM=";
 	msg += "1,";
 	itoa(this->inqm_max_mediciones, buffer, 10);
@@ -265,20 +266,32 @@ int BTHandler::get_average_reading_for_address(const char * address) {
 	}
 
 	int number_of_reading_values = 0;
-	int sum_of_reading_values = 0;
+	int average_noise_level = 0;
 	int i = 0;
 
 	while(i < inqm_max_mediciones) {
+		Serial.print("i:");
+		Serial.println(i);
+		Serial.print("address:");
+		Serial.println(mediciones[i].address);
+		Serial.print("rssi:");
+		Serial.println(mediciones[i].dec_rssi);
 		if(!strcmp(address, mediciones[i].address)) {
-			sum_of_reading_values += mediciones[i].dec_rssi;
 			number_of_reading_values++;
+			if(number_of_reading_values > 1) {
+				average_noise_level = (average_noise_level + mediciones[i].dec_rssi) / 2;
+			} else {
+				average_noise_level = mediciones[i].dec_rssi;
+			}
 		}
 		i++;
+		Serial.print("avr:");
+		Serial.print(average_noise_level);
 	}
 
 	if(!number_of_reading_values) {
 		return ADDRESS_NOT_FOUND;
 	}
 
-	return sum_of_reading_values / number_of_reading_values;
+	return average_noise_level;
 }

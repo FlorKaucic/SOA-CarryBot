@@ -39,12 +39,10 @@ int BTParser::parse(char * message, t_medicion * readings) {
 	}
 	
 	for(char * line : lines) {
-		if(strcmp(line, "OK\r\n") != EQUAL) {
-			
-			if ( sscanf(line, "+INQ:%[^,],%*[^,],%x\n", readings[i].address, &readings[i].dec_rssi) != 2 )
+		if(strcmp(line, "OK") != EQUAL) {
+			if (sscanf(line, "+INQ:%[^,],%*[^,],%x\n", readings[i].address, &readings[i].dec_rssi) != 2) {
 				return CORRUPTED_MSG;
-			
-			
+			}
 			i++;
 		}
 	}
