@@ -10,7 +10,6 @@ Proyecto de IoT con Arduino y Android para Sistemas Operativos Avanzados (UNLaM)
 - Kaucic, Florencia
 - Martinez, Sebastian
 - Palopoli, Juan Jose
-- Porro, Diego
 
 ### Directorios
 - [Sistema Embebido](https://github.com/FlorKaucic/SOA-CarryBot/tree/master/sistema-embebido "Subdirectorio del SE en GitHub")
