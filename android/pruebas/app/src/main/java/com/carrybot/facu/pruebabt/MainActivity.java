@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter filter = new IntentFilter();
 
         filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED); //Cambia el estado del Bluethoot (Acrtivado /Desactivado)
-        filter.addAction(BluetoothDevice.ACTION_FOUND); //Se encuentra un dispositivo bluethoot al realizar una busqueda
+        //filter.addAction(BluetoothDevice.ACTION_FOUND); //Se encuentra un dispositivo bluethoot al realizar una busqueda
+        filter.addAction(BluetoothDevice.ACTION_NAME_CHANGED);
         filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED); //Cuando se comienza una busqueda de bluethoot
         filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED); //cuando la busqueda de bluethoot finaliza
 
@@ -154,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
 
             //Atraves del Intent obtengo el evento de Bluethoot que informo el broadcast del SO
             String action = intent.getAction();
-
             //Si cambio de estado el Bluethoot(Activado/desactivado)
             if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action))
             {
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             //Si se inicio la busqueda de dispositivos bluethoot
-            else if (BluetoothAdapter.ACTION_DISCOVERY_STARTED.equals(action))
+            if (BluetoothAdapter.ACTION_DISCOVERY_STARTED.equals(action))
             {
                 //Creo la lista donde voy a mostrar los dispositivos encontrados
                 mDeviceList = new ArrayList<BluetoothDevice>();
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 mProgressDlg.show();
             }
             //Si finalizo la busqueda de dispositivos bluethoot
-            else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action))
+            if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action))
             {
                 //se cierra el cuadro de dialogo de busqueda
                 mProgressDlg.dismiss();
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newIntent);
             }
             //si se encontro un dispositivo bluethoot
-            else if (BluetoothDevice.ACTION_NAME_CHANGED.equals(action))
+            if (BluetoothDevice.ACTION_NAME_CHANGED.equals(action))
             {
                 //Se lo agregan sus datos a una lista de dispositivos encontrados
                 BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);

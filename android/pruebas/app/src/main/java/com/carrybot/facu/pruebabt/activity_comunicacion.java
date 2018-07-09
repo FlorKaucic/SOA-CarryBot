@@ -164,7 +164,7 @@ public class activity_comunicacion extends Activity {
     private View.OnClickListener btnEncenderListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            mConnectedThread.write("1");    // Send "1" via Bluetooth
+            mConnectedThread.write("ON\r\n");    // Send "1" via Bluetooth
             showToast("Encender el LED");        }
     };
 
@@ -172,7 +172,7 @@ public class activity_comunicacion extends Activity {
     private View.OnClickListener btnApagarListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            mConnectedThread.write("2");    // Send "0" via Bluetooth
+            mConnectedThread.write("OFF\r\n");    // Send "0" via Bluetooth
             showToast("Apagar el LED");
         }
     };
