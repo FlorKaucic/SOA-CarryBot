@@ -20,9 +20,11 @@ const int MILLISECONDS_FOR_TURNING = 1300;
 Sebas = "305A:3A:11CB29";
 TV Flor = "F877:B8:C3662F";
 Flor = "E458:B8:90E129";
+Motolola Facu = "8410:0D:7E7237";
+Xiaomi Facu = "04B1:67:40005D";
 */
 
-char BLUETOOTH_DEVICE_ADDRESS[] = "E458:B8:90E129";
+char BLUETOOTH_DEVICE_ADDRESS[] = "4B1:67:40005D";
 const double PROCESS_NOISE = 0.125;
 const double SENSOR_NOISE = 32;
 const double ESTIMATED_ERROR = 1023;
@@ -44,28 +46,32 @@ SignalComparator signalComparator(&Serial2, BLUETOOTH_DEVICE_ADDRESS);
 
 void setup() {
   Serial.begin(9600);
+  Serial3.begin(38400);
   Serial2.begin(38400);
   delay(LONG_DELAY);
 
+  Serial.println("Waiting ping");
   String ping = "";
-  /*while(!ping.startsWith("PING")) {
+  while(!ping.startsWith("PING")) {
     if(Serial3.available()) {
       ping = Serial3.readString();
       Serial.println(ping);
     }
   }
-  */
   Serial.println("PONG");
+  Serial3.println("PONG");
   alarm.connected();
-
   Serial.println("Signal comparator init");
+  Serial3.println("Signal comparator init");
   signalComparator.init();
   Serial.println("Signal comparator set parameters");
+  Serial3.println("Signal comparator set parameters");
   signalComparator.setFilterParameters(PROCESS_NOISE, SENSOR_NOISE, ESTIMATED_ERROR);
   signalComparator.setInitialReading();
 }
 
 void loop() {
+  Serial3.println("GO GO GO");
   Serial.println("GO GO GO");
   carControl.goForward();
   int loopCount = 0;
@@ -89,16 +95,16 @@ void loop() {
 
     delay(300);
   }
-
   Serial.println("STOP");
+  Serial3.println("STOP");
   carControl.stop();
 
   while(roadBlocked) {
     led.fadeIn();
     alarm.error();
     led.fadeOut();
-    
-    Serial.println("ERROR");
+    Serial.println("ERROR");   
+    Serial3.println("ERROR");
     
     delay(200);
     
@@ -107,15 +113,19 @@ void loop() {
 
 
   Serial.println("Relative distance measuring: ");
+  Serial3.println("Relative distance measuring: ");
   RelativeDistance distance = signalComparator.getRelativeDistance();
-
+ 
   Serial.print("Result: ");
+  Serial3.print("Result: ");
   if(distance == RelativeDistance::FURTHER_AWAY_FROM_TARGET) {
     Serial.println("TIME TO TURN LEFT");
+    Serial3.println("TIME TO TURN LEFT");
     alarm.alert();
     carControl.turnLeft();
   } else if (distance == RelativeDistance::ON_TARGET) {
     Serial.println("ON TARGET");
+    Serial3.println("ON TARGET");
     while(true){
       led.fadeIn();
       alarm.arrival();
