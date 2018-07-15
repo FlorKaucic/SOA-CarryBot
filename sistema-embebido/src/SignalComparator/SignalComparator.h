@@ -29,16 +29,21 @@ class SignalComparator
 		void setFilterParameters(double process_noise, double sensor_noise, double estimated_error);
 		int setInitialReading(void);
 		void init(void);
+		void setAddress(char * add);
+		void setThreshold(int value);
+		void setNoiseOnTarget(int value);
 
 	private:
 		const int DEFAULT_NUMBER_OF_READINGS = 5;
 		const int DEFAULT_READING_TIMEOUT = 48;
 		const int DEFAULT_THRESHOLD = -3;
 		const int INITIAL_NOISE_LEVEL = 0;
-		const int MAXIMUM_NOISE_ON_TARGET = -50;
+		const int DEFAULT_MAXIMUM_NOISE_ON_TARGET = -50;
 		BTHandler * _bluetooth;
 		Kalman * _filter;
 		char * _address;
+		int _noiseOnTarget;
+		int _threshold;
 		int _previousNoiseLevel;
 		int _readingTimeout;
 		int _numberOfReadings;

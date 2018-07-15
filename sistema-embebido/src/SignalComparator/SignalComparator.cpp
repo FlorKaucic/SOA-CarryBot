@@ -9,8 +9,10 @@
 SignalComparator::SignalComparator(HardwareSerial *serial, char *address) {
 	this->_numberOfReadings = DEFAULT_NUMBER_OF_READINGS;
 	this->_readingTimeout = DEFAULT_READING_TIMEOUT;
+	this->_noiseOnTarget = DEFAULT_MAXIMUM_NOISE_ON_TARGET;
 	this->_address = address;
 	this->_bluetooth = new BTHandler(serial);
+	this->_threshold = DEFAULT_THRESHOLD;
 };
 
 SignalComparator::SignalComparator(HardwareSerial *serial, char *address, int numberOfReadings, int readingTimeout) {
@@ -25,8 +27,12 @@ void SignalComparator::setFilterParameters(double process_noise, double sensor_n
 	this->_filter = new Kalman(process_noise, sensor_noise, estimated_error,INITIAL_NOISE_LEVEL);
 }
 
+void SignalComparator::setAddress(char *add){
+	strcpy(this->_address,add);
+}
+
 int SignalComparator::setInitialReading() {
-	this->_previousNoiseLevel = this->_bluetooth->get_average_reading_for_address(this->_address);
+	this->_previousNoiseLevel = this->_bluetooth->get_mode_value_reading_for_address(this->_address);
 	this->_previousNoiseLevel = this->_filter->getFilteredValue(this->_previousNoiseLevel);
 	return this->_previousNoiseLevel;
 }
@@ -42,40 +48,52 @@ void SignalComparator::init() {
 }
 
 int SignalComparator::_getFilteredNoiseLevel() {
-	Serial.println("Getting noise level...");
+	Serial.println("(SignalComparator) Getting noise level...");
 	this->_bluetooth->at_inq();
 	int noiseLevel;
-	Serial.println("Filtering noise level...");
-	noiseLevel = this->_bluetooth->get_average_reading_for_address(this->_address);
+	Serial.println("(SignalComparator) Filtering noise level...");
+	//noiseLevel = this->_bluetooth->get_average_reading_for_address(this->_address);
+	Serial.println("(SignalComparator) Address: ");
+	Serial.println(this->_address);
+	noiseLevel = this->_bluetooth->get_mode_value_reading_for_address(this->_address);
+	Serial.println("(SignalComparator) Mode: ");
+	Serial.println(noiseLevel);
 	if(noiseLevel == e_generic_returns::ADDRESS_NOT_FOUND) {
 		return ADDRESS_NOT_FOUND;
 	}
-	Serial.println("Kalmaning the fuck away from noise level...");
+	Serial.println("(SignalComparator) Kalmaning the fuck away from noise level...");
 	noiseLevel = this->_filter->getFilteredValue(noiseLevel);
 	return noiseLevel;
 }
 
+void SignalComparator::setThreshold(int value){
+	this->_threshold = value;
+}
+
+void SignalComparator::setNoiseOnTarget(int value){
+	this->_noiseOnTarget = value;
+}
 
 RelativeDistance SignalComparator::getRelativeDistance() {
 	int noiseLevel = this->_getFilteredNoiseLevel();
 
-	Serial.print("Noise Level: ");
+	Serial.print("(SignalComparator) Noise Level: ");
 	Serial.println(noiseLevel);
 
 	if (noiseLevel == e_generic_returns::ADDRESS_NOT_FOUND) {
 		return RelativeDistance::ERROR;
 	}
 
-	if (noiseLevel > MAXIMUM_NOISE_ON_TARGET) {
+	if (noiseLevel > _noiseOnTarget) {
 		return RelativeDistance::ON_TARGET;
 	}
 
-	if (noiseLevel < (this->_previousNoiseLevel + DEFAULT_THRESHOLD)) {
+	if (noiseLevel < (this->_previousNoiseLevel + _threshold)) {
 		this->_previousNoiseLevel = noiseLevel;
 		return RelativeDistance::FURTHER_AWAY_FROM_TARGET;
 	}
 
-	if (noiseLevel > (this->_previousNoiseLevel - DEFAULT_THRESHOLD)) {
+	if (noiseLevel > (this->_previousNoiseLevel - _threshold)) {
 		this->_previousNoiseLevel = noiseLevel;
 	}
 

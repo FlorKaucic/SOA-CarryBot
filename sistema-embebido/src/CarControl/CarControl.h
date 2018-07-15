@@ -40,13 +40,13 @@ class CarControl
 		CarControl(const int leftMotorClockwisePin,
 		           const int leftMotorCounterClockwisePin,
 		           const int rightMotorClockwisePin,
-		           const int rightMotorCounterClockwisePin,
-		           const int millisecondsForTurning);
+		           const int rightMotorCounterClockwisePin);
 		void goForward(void);
 		void goBackwards(void);
 		void turnLeft(void);
 		void turnRight(void);
 		void stop(void);
+		void setMillisecondsForTurning(const int);
 
 	private:
 		int _leftMotorClockwisePin;
