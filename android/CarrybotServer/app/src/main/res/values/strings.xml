@@ -64,5 +64,7 @@
 
     <!-- Properties -->
     <string name="properties_bluetooth_address">bluetooth_address</string>
+    <string name="gps_network_not_enabled">El GPS no está activo</string>
+    <string name="open_location_settings">Activar</string>
     <string name="app_name">Carrybot Restaurant</string>
 </resources>

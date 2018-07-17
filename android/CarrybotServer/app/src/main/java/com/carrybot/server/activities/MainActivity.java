@@ -1,13 +1,16 @@
 package com.carrybot.server.activities;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -138,6 +141,38 @@ public class MainActivity extends AppCompatActivity {
 
     private void requestLocation() {
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        boolean gpsEnabled = false;
+        boolean networkEnabled = false;
+
+        try {
+            gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch(Exception ignored) {}
+
+        try {
+            networkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch(Exception ignored) {}
+
+        if(!gpsEnabled && !networkEnabled) {
+            // notify user
+            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+            dialog.setMessage(this.getResources().getString(R.string.gps_network_not_enabled));
+            dialog.setPositiveButton(this.getResources().getString(R.string.open_location_settings), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    // TODO Auto-generated method stub
+                    Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(myIntent);
+                    //get gps
+                }
+            });
+            dialog.setNegativeButton(this.getString(R.string.button_cancel), new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {}
+            });
+            dialog.show();
+        }
 
         locationListener = new LocationListener() {
             public void onLocationChanged(Location location) {
