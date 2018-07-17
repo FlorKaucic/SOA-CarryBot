@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.carrybot.server.activities.OrdersActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:id="@+id/action_manual"
+        android:orderInCategory="200"
+        android:title="@string/action_manual"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_about"

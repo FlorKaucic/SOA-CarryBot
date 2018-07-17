@@ -3,7 +3,7 @@
     <string name="app_name">Carrybot Restaurant</string>
 
     <!-- Orders Menu -->
-    <string name="action_settings">Configuración</string>
+    <string name="action_manual">Control manual</string>
     <string name="action_about">Sobre Carrybot…</string>
 
     <!-- Waiting -->
@@ -15,4 +15,52 @@
     <string name="clientlist_added_user">Se conectó el cliente %1$s</string>
     <string name="clientlist_firebase_conn_lost">Problemas al conectar con el servidor.</string>
     <string name="clientlist_firebase_conn_lost_action">SALIR</string>
+    <string name="clientlist_title">Listado de clientes</string>
+
+    <!-- ManualControl -->
+    <string name="manual_control_title">Control manual</string>
+    <string name="manual_control_instructions">Usá las flechas para controlar a Carrybot</string>
+    <string name="manual_control_cancel_description">Cancelar</string>
+    <string name="manual_control_alarm_description">Anunciar</string>
+
+    <!-- About -->
+    <string name="about_developed_by">Desarrollado por:</string>
+    <string name="about_name1">Bistolfi, Facundo</string>
+    <string name="about_name2">Kaucic, Florencia</string>
+    <string name="about_name3">Martínez, Sebastián</string>
+    <string name="about_name4">Palopoli, Juan José</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Configuración</string>
+    <string name="settings_turning_time">Tiempo de giro</string>
+    <string name="settings_turning_time_default">600</string>
+    <string name="settings_loops">Ciclos entre mediciones</string>
+    <string name="settings_loops_default">10</string>
+    <string name="settings_comparison_threshold">Precision de distancia</string>
+    <string name="settings_comparison_threshold_default">1</string>
+    <string name="settings_arrival_threshold">Precision de llegada</string>
+    <string name="settings_arrival_threshold_default">53</string>
+    <string name="settings_mac_address">Dirección del servidor</string>
+
+    <!-- Commands -->
+    <string name="settings_command_set_mac_address">SET+MAC=%1$s</string>
+    <string name="settings_command_set_loops">SET+LOOPS=%1$d</string>
+    <string name="settings_command_set_threshold">SET+TRESH=%1$d</string>
+    <string name="settings_command_set_turning_time">SET+TGIRO=%1$d</string>
+    <string name="settings_command_set_max_level">SET+LLEGADA=%1$d</string>
+    <string name="settings_command_done">SET+DONE</string>
+
+    <!-- Main -->
+    <string name="main_title">CarryBot</string>
+    <string name="main_subtitle">Servidor</string>
+    <string name="main_finding_location">Localizando restaurant…</string>
+    <string name="main_restaurant_found">Restaurant encontrado</string>
+    <string name="main_restaurant">Restaurant: %1$s</string>
+
+    <!-- Generic -->
+    <string name="button_next">Siguiente</string>
+    <string name="button_exit">Salir</string>
+
+    <!-- Properties -->
+    <string name="properties_bluetooth_address">bluetooth_address</string>
 </resources>

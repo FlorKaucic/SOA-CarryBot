@@ -1,10 +1,10 @@
 package com.carrybot.server.activities;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.carrybot.server.R;
+import com.carrybot.server.model.ServerData;
 import com.carrybot.server.model.User;
-import com.carrybot.server.services.MessagingService;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +32,8 @@ public class ClientListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_list);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         clientList = new HashMap<>();
         clientListAdapter = new UserMapAdapter(clientList);
         ListView clientList = findViewById(R.id.clientListView);
@@ -46,13 +48,11 @@ public class ClientListActivity extends AppCompatActivity {
         connectedUsers.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String prevChildKey) {
-                Log.i("SNAPSHOT", dataSnapshot.toString());
                 User addedUser = dataSnapshot.getValue(User.class);
 
-                if(addedUser != null && addedUser.getServer().equals(MessagingService.SERVER_ID)) {
+                if(addedUser.getServer() == ServerData.getServerId()) {
                     clientList.put(addedUser.getId(), addedUser);
                     clientListAdapter.notifyDataSetChanged();
-                    Log.i("SNAPSHOT", addedUser.getId() + ": " + addedUser.getName());
                 }
             }
 
@@ -70,7 +70,6 @@ public class ClientListActivity extends AppCompatActivity {
                             removedUserMessage,
                             Toast.LENGTH_SHORT
                     ).show();
-
 
                     if (clientList.containsKey(removedUser.getId())) {
                         clientList.remove(removedUser.getId());

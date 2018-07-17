@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activities.AboutCarrybotActivity">
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Display2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/main_title"
+        android:textAlignment="center" />
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Display1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/main_subtitle"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/carrybot"
+        android:contentDescription="@string/main_title" />
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/about_developed_by"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="@string/about_name1" />
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="@string/about_name2" />
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="@string/about_name3" />
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="@string/about_name4" />
+
+</LinearLayout>

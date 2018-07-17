@@ -3,14 +3,17 @@ package com.carrybot.server.model;
 public class User {
     private String id;
     private String name;
-    private String server;
+    private int server;
+    private String macAddress;
+    private String token;
 
     public User() {}
 
-    public User(String id, String name, String server) {
+    public User(String id, String name, int server, String macAddress, String token) {
         this.id = id;
         this.name = name;
         this.server = server;
+        this.macAddress = macAddress;
     }
 
     public String getId() {
@@ -29,11 +32,19 @@ public class User {
         this.name = name;
     }
 
-    public String getServer() {
+    public int getServer() {
         return server;
     }
 
-    public void setServer(String server) {
+    public void setServer(int server) {
         this.server = server;
+    }
+
+    public String getMacAddress() {
+        return macAddress;
+    }
+
+    public void setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
     }
 }

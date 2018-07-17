@@ -3,12 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/clientlist_layout"
-    tools:context=".activities.ClientListActivity">
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/orderListView" />
+    tools:context=".activities.BluetoothListActivity">
 
 </android.support.constraint.ConstraintLayout>
