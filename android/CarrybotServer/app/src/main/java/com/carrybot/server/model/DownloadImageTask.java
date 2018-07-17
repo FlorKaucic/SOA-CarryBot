@@ -8,26 +8,26 @@ import android.util.Log;
 import java.io.InputStream;
 
 public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-    Product product;
+    private Product product;
 
     public DownloadImageTask(Product product) {
         this.product = product;
     }
 
-    protected Bitmap doInBackground(String... urls) {
-        String urldisplay = urls[0];
-        Bitmap mIcon11 = null;
+    protected Bitmap doInBackground(String... params) {
+        Bitmap image = null;
         try {
-            InputStream in = new java.net.URL(urldisplay).openStream();
-            mIcon11 = BitmapFactory.decodeStream(in);
+            InputStream in = new java.net.URL(product.getPhotoUrl()).openStream();
+            image = BitmapFactory.decodeStream(in);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
         }
-        return mIcon11;
+        return image;
     }
 
     protected void onPostExecute(Bitmap result) {
         product.setImageBitmap(result);
+        ServerData.notifyImageDownload();
     }
 }

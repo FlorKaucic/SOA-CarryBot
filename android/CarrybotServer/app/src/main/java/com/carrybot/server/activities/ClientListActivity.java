@@ -5,17 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.carrybot.server.R;
 import com.carrybot.server.model.ServerData;
 import com.carrybot.server.model.User;
+import com.carrybot.server.model.UserMapAdapter;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,7 +32,7 @@ public class ClientListActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         clientList = new HashMap<>();
-        clientListAdapter = new UserMapAdapter(clientList);
+        clientListAdapter = new UserMapAdapter(clientList, this);
         ListView clientList = findViewById(R.id.clientListView);
         clientList.setAdapter(clientListAdapter);
 
@@ -103,47 +100,5 @@ public class ClientListActivity extends AppCompatActivity {
                 ).show();
             }
         });
-    }
-
-    private class UserMapAdapter extends BaseAdapter {
-        private HashMap<String, User> userMap;
-
-        UserMapAdapter(HashMap<String, User> userMap){
-            this.userMap  = userMap;
-        }
-
-        @Override
-        public int getCount() {
-            return userMap.size();
-        }
-
-        @Override
-        public User getItem(int position) {
-            String[] userMapKeys = userMap.keySet().toArray(new String[userMap.size()]);
-            return userMap.get(userMapKeys[position]);
-        }
-
-        @Override
-        public long getItemId(int arg0) {
-            return arg0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            User user = getItem(position);
-
-            View listItem = convertView;
-
-            if(listItem == null)
-                listItem = LayoutInflater.from(getApplicationContext()).inflate(R.layout.clientlist_item, parent,false);
-
-            TextView name = listItem.findViewById(R.id.clientlist_item_name);
-            name.setText(user.getName());
-
-            TextView macAddress = listItem.findViewById(R.id.clientlist_item_mac_address);
-            macAddress.setText(user.getMacAddress());
-
-            return listItem;
-        }
     }
 }

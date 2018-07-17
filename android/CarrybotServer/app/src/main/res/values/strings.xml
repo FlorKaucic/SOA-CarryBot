@@ -1,6 +1,6 @@
 <resources>
     <!-- Orders -->
-    <string name="app_name">Carrybot Restaurant</string>
+    <string name="orders_title">Listado de pedidos</string>
 
     <!-- Orders Menu -->
     <string name="action_manual">Control manual</string>
@@ -63,4 +63,5 @@
 
     <!-- Properties -->
     <string name="properties_bluetooth_address">bluetooth_address</string>
+    <string name="app_name">Carrybot Restaurant</string>
 </resources>

@@ -10,7 +10,6 @@ import com.carrybot.server.services.MessagingService;
 import android.view.View;
 
 public class WaitingActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,22 +5,20 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.carrybot.server.R;
+import com.carrybot.server.model.Item;
 import com.carrybot.server.model.Order;
+import com.carrybot.server.model.OrderListAdapter;
 import com.carrybot.server.model.ServerData;
-import com.carrybot.server.model.Product;
-
-import java.util.ArrayList;
+import com.carrybot.server.model.User;
 
 public class OrdersActivity extends AppCompatActivity {
+    OrderListAdapter orderListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +28,30 @@ public class OrdersActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.ordersToolbar);
         setSupportActionBar(toolbar);
+
+        orderListAdapter = new OrderListAdapter(ServerData.getOrderList(), this);
+
+        ListView orderListView = findViewById(R.id.orderListView);
+        orderListView.setAdapter(orderListAdapter);
+
+        User client = new User("1", "Juan", 2,"FFFFFF:FFFF");
+        Item item = new Item();
+        item.setId(1);
+        item.setQuantity(2);
+        Order order = new Order(client, item);
+        ServerData.addOrder(order);
+
+        ServerData.registerOrderListChangeListener(new OrderChangeListener() {
+            @Override
+            public void onChange() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        orderListAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        });
     }
 
     @Override
@@ -64,44 +86,7 @@ public class OrdersActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private class OrderMapAdapter extends BaseAdapter {
-        private ArrayList<Order> orderList;
-        private ArrayList<Product> menu;
-
-        OrderMapAdapter(ArrayList<Order> orderList){
-            this.orderList  = orderList;
-            this.menu = ServerData.getMenu();
-        }
-
-        @Override
-        public int getCount() {
-            return orderList.size();
-        }
-
-        @Override
-        public Order getItem(int position) {
-            return orderList.get(position);
-        }
-
-        @Override
-        public long getItemId(int arg0) {
-            return arg0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            Order order = getItem(position);
-
-            View listItem = convertView;
-
-            if(listItem == null)
-                listItem = LayoutInflater.from(getApplicationContext()).inflate(R.layout.clientlist_item, parent,false);
-
-            int itemId = order.getItem().getId();
-            TextView itemName = listItem.findViewById(R.id.itemNameTextView);
-            itemName.setText("");
-
-            return listItem;
-        }
+    public interface OrderChangeListener {
+        void onChange();
     }
 }

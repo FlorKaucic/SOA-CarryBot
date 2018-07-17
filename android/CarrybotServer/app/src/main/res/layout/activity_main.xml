@@ -28,7 +28,7 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         android:visibility="visible" />
 
     <TextView
@@ -52,7 +52,7 @@
         android:id="@+id/continueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:enabled="false"
         android:onClick="goToBTList"
         android:text="@string/button_next" />

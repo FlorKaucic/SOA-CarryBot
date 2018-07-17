@@ -142,11 +142,10 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/nextbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:text="@string/button_next"
-        android:onClick="goToWaitingScreen"/>
+        android:text="@string/button_next" />
 
 </LinearLayout>

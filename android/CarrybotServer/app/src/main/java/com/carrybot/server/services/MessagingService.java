@@ -1,5 +1,6 @@
 package com.carrybot.server.services;
 
+
 import com.carrybot.server.model.Notification;
 import com.carrybot.server.model.NotificationType;
 import com.carrybot.server.model.Order;
@@ -27,8 +28,9 @@ public class MessagingService extends FirebaseMessagingService {
         if(remoteMessage.getData().size() > 0) {
             Notification notification = new Notification(remoteMessage.getData());
             notification.put(Notification.USER_ID, remoteMessage.getFrom());
-            NotificationType type = NotificationType.valueOf(notification.get(Notification.TYPE));
-            switch (type) {
+            String type = notification.get(Notification.TYPE);
+            NotificationType notificationType = NotificationType.valueOf(type);
+            switch (notificationType) {
                 case ORDER:
                     addOrder(notification);
                     break;

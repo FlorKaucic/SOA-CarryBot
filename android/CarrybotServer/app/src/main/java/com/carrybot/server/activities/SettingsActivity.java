@@ -5,12 +5,27 @@ import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.carrybot.server.R;
+import com.carrybot.server.model.FetchMenuTask;
 import com.carrybot.server.model.ServerData;
 
 public class SettingsActivity extends AppCompatActivity {
+    private static boolean FLAG_MENU_FETCHED = false;
+    private static boolean FLAG_CONFIG_DONE = true;
+
+    private FetchMenuTask.OnFetchMenuListener onFetchMenuListener = new FetchMenuTask.OnFetchMenuListener() {
+        @Override
+        public void onSuccess() {
+            FLAG_MENU_FETCHED = true;
+
+            if(FLAG_CONFIG_DONE) {
+                goToWaitingScreen();
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +39,18 @@ public class SettingsActivity extends AppCompatActivity {
         TextView macAddressTextView = findViewById(R.id.macAddress);
         macAddressTextView.setText(macAddress);
 
+        Button nextButton = findViewById(R.id.nextbutton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FetchMenuTask task = new FetchMenuTask();
+                task.setOnFetchMenuListener(onFetchMenuListener);
+                task.run();
+
+                // TODO: add config call here
+            }
+        });
+
     }
 
     private String getMacAddress() {
@@ -31,7 +58,7 @@ public class SettingsActivity extends AppCompatActivity {
                 getString(R.string.properties_bluetooth_address));
     }
 
-    public void goToWaitingScreen(View view) {
+    public void goToWaitingScreen() {
         Intent intent = new Intent(this, WaitingActivity.class);
         startActivity(intent);
         this.finish();
