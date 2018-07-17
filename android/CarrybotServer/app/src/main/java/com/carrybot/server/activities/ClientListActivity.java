@@ -140,6 +140,9 @@ public class ClientListActivity extends AppCompatActivity {
             TextView name = listItem.findViewById(R.id.clientlist_item_name);
             name.setText(user.getName());
 
+            TextView macAddress = listItem.findViewById(R.id.clientlist_item_mac_address);
+            macAddress.setText(user.getMacAddress());
+
             return listItem;
         }
     }

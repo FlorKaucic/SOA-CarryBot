@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#7f0204</color>
     <color name="colorAccent">#f44244</color>
     <color name="colorDarkButton">#555555</color>
+    <color name="colorDarkText">#444444</color>
     <color name="colorNotificationIcon">#ffffff</color>
     <color name="ic_launcher_background">#ab0003</color>
 </resources>
