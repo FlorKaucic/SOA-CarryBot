@@ -39,10 +39,12 @@ public class SettingsActivity extends AppCompatActivity {
         TextView macAddressTextView = findViewById(R.id.macAddress);
         macAddressTextView.setText(macAddress);
 
-        Button nextButton = findViewById(R.id.nextbutton);
+        final Button nextButton = findViewById(R.id.nextbutton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                nextButton.setEnabled(false);
+
                 FetchMenuTask task = new FetchMenuTask();
                 task.setOnFetchMenuListener(onFetchMenuListener);
                 task.run();

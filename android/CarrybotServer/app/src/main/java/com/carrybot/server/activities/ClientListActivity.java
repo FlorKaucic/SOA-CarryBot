@@ -88,7 +88,7 @@ public class ClientListActivity extends AppCompatActivity {
                         R.string.clientlist_firebase_conn_lost,
                         Snackbar.LENGTH_LONG
                 ).setAction(
-                        R.string.clientlist_firebase_conn_lost_action,
+                        getString(R.string.button_exit).toUpperCase(),
                         new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {

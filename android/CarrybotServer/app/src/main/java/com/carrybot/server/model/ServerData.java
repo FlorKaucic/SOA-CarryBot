@@ -7,6 +7,8 @@ import com.carrybot.server.services.MessagingService;
 import java.util.ArrayList;
 
 public class ServerData {
+    public static final int FIRST_POSITION = 0;
+
     private static String MAC_ADDRESS = null;
     private static Integer SERVER_ID = null;
     private static String RESTAURANT_NAME = null;
@@ -46,13 +48,17 @@ public class ServerData {
 
     public static void addOrder(Order order) {
         orders.add(order);
-
-        if(orderChangeListener != null) {
-            orderChangeListener.onChange();
-        }
+        notifyChange();
     }
 
-    public static void removeOrder(String userId) {
+    public static void putOrderBack(Order order) {
+        orders.add(FIRST_POSITION, order);
+        notifyChange();
+    }
+
+
+    public static Order removeOrder(String userId) {
+        Order removedOrder = null;
         for(Order order : orders) {
             if(order.getClient().getId().equals(userId)) {
                 int index = orders.indexOf(order);
@@ -62,13 +68,13 @@ public class ServerData {
                     MessagingService.sendNextTo(token);
                 }
 
-                orders.remove(index);
+                removedOrder = orders.remove(index);
             }
         }
 
-        if(orderChangeListener != null) {
-            orderChangeListener.onChange();
-        }
+        notifyChange();
+
+        return removedOrder;
     }
 
     public static ArrayList<Order> getOrderList() {
@@ -103,9 +109,20 @@ public class ServerData {
         orderChangeListener = null;
     }
 
-    public static void notifyImageDownload() {
+    public static void notifyChange() {
         if(orderChangeListener != null) {
             orderChangeListener.onChange();
         }
+    }
+
+    public static Order removeOrder(int position) {
+        Order removedOrder = null;
+
+        if(position < orders.size()) {
+            removedOrder = orders.remove(position);
+            notifyChange();
+        }
+
+        return removedOrder;
     }
 }

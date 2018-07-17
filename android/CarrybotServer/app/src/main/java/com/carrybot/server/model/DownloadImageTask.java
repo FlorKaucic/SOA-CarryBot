@@ -28,6 +28,6 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
 
     protected void onPostExecute(Bitmap result) {
         product.setImageBitmap(result);
-        ServerData.notifyImageDownload();
+        ServerData.notifyChange();
     }
 }
