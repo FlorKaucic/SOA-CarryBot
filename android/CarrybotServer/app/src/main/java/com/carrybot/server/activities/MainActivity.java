@@ -157,19 +157,20 @@ public class MainActivity extends AppCompatActivity {
             // notify user
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             dialog.setMessage(this.getResources().getString(R.string.gps_network_not_enabled));
-            dialog.setPositiveButton(this.getResources().getString(R.string.open_location_settings), new DialogInterface.OnClickListener() {
+            dialog.setPositiveButton(this.getResources().getString(R.string.button_turn_on), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface paramDialogInterface, int paramInt) {
-                    // TODO Auto-generated method stub
                     Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                     startActivity(myIntent);
-                    //get gps
                 }
             });
             dialog.setNegativeButton(this.getString(R.string.button_cancel), new DialogInterface.OnClickListener() {
-
                 @Override
-                public void onClick(DialogInterface paramDialogInterface, int paramInt) {}
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    moveTaskToBack(true);
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                    System.exit(1);
+                }
             });
             dialog.show();
         }
@@ -233,7 +234,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToBTList(View view) {
-        Intent intent = new Intent(this, SettingsActivity.class);
+        Intent intent = new Intent(this, BluetoothListActivity.class);
         startActivity(intent);
         this.finish();
     }

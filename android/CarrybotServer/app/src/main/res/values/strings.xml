@@ -14,7 +14,7 @@
     <!-- ClientList -->
     <string name="clientlist_removed_user">Se desconectó el cliente %1$s</string>
     <string name="clientlist_added_user">Se conectó el cliente %1$s</string>
-    <string name="clientlist_firebase_conn_lost">Problemas al conectar con el servidor.</string>
+    <string name="clientlist_firebase_conn_lost">Problemas al conectar con el manager.</string>
     <string name="clientlist_title">Listado de clientes</string>
 
     <!-- ManualControl -->
@@ -40,7 +40,11 @@
     <string name="settings_comparison_threshold_default">1</string>
     <string name="settings_arrival_threshold">Precision de llegada</string>
     <string name="settings_arrival_threshold_default">53</string>
-    <string name="settings_mac_address">Dirección del servidor</string>
+    <string name="settings_mac_address">Dirección del manager</string>
+
+    <!-- BluetoothList -->
+    <string name="action_sync_start">Iniciar escaneo</string>
+    <string name="action_sync_stop">Finalizar escaneo</string>
 
     <!-- Commands -->
     <string name="settings_command_set_mac_address">SET+MAC=%1$s</string>
@@ -52,7 +56,7 @@
 
     <!-- Main -->
     <string name="main_title">CarryBot</string>
-    <string name="main_subtitle">Servidor</string>
+    <string name="main_subtitle">Manager</string>
     <string name="main_finding_location">Localizando restaurant…</string>
     <string name="main_restaurant_found">Restaurant encontrado</string>
     <string name="main_restaurant">Restaurant: %1$s</string>
@@ -61,10 +65,11 @@
     <string name="button_next">Siguiente</string>
     <string name="button_exit">Salir</string>
     <string name="button_cancel">Cancelar</string>
+    <string name="exit_attemp_message">¿Desea salir de la aplicación?</string>
+    <string name="gps_network_not_enabled">El GPS no está activo</string>
+    <string name="button_turn_on">Activar</string>
+    <string name="app_name">Carrybot Restaurant</string>
 
     <!-- Properties -->
     <string name="properties_bluetooth_address">bluetooth_address</string>
-    <string name="gps_network_not_enabled">El GPS no está activo</string>
-    <string name="open_location_settings">Activar</string>
-    <string name="app_name">Carrybot Restaurant</string>
 </resources>

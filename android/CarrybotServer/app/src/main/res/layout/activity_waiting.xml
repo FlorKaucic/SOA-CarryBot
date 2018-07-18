@@ -24,6 +24,7 @@
         app:srcCompat="@drawable/lightbulb" />
 
     <TextView
+        android:id="@+id/waitingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -31,6 +32,7 @@
         android:textAlignment="center" />
 
     <Button
+        android:id="@+id/goToOrderListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

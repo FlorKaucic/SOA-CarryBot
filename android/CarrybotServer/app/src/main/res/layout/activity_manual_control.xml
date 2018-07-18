@@ -72,7 +72,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/colorDarkButton"
-                android:drawableStart="@drawable/ic_stop" />
+                android:drawableStart="@drawable/ic_stop"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/buttonRight"

@@ -19,10 +19,7 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         try {
             InputStream in = new java.net.URL(product.getPhotoUrl()).openStream();
             image = BitmapFactory.decodeStream(in);
-        } catch (Exception e) {
-            Log.e("Error", e.getMessage());
-            e.printStackTrace();
-        }
+        } catch (Exception ignored) {}
         return image;
     }
 

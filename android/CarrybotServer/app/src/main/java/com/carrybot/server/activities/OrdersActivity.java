@@ -87,6 +87,14 @@ public class OrdersActivity extends AppCompatActivity implements SensorEventList
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         lastUpdate = System.currentTimeMillis();
+
+        Sensor lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        if(lightSensor != null) {
+            sensorManager.registerListener(
+                    this,
+                    lightSensor,
+                    SensorManager.SENSOR_DELAY_NORMAL);
+        }
     }
 
     @Override
@@ -129,8 +137,18 @@ public class OrdersActivity extends AppCompatActivity implements SensorEventList
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             getAccelerometer(event);
+        } else if(event.sensor.getType() == Sensor.TYPE_LIGHT){
+            float lightLevel = event.values[0];
+            if(lightLevel <= WaitingActivity.LIGHT_LEVEL_THRESHOLD) {
+                goToWaitingActivity();
+            }
         }
 
+    }
+
+    private void goToWaitingActivity() {
+        Intent intent = new Intent(this, WaitingActivity.class);
+        startActivity(intent);
     }
 
     private void getAccelerometer(SensorEvent event) {
