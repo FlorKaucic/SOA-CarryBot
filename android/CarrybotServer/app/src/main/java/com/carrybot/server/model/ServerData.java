@@ -17,6 +17,7 @@ public class ServerData {
     private static ArrayList<Product> menu = new ArrayList<>();
 
     private static OrdersActivity.OrderChangeListener orderChangeListener = null;
+    private static BluetoothThread bluetoothThread;
 
     public static String getMacAddress() {
         return MAC_ADDRESS;
@@ -124,5 +125,13 @@ public class ServerData {
         }
 
         return removedOrder;
+    }
+
+    public static void setBluetoothThread(BluetoothThread bluetoothThread) {
+        ServerData.bluetoothThread = bluetoothThread;
+    }
+
+    public static void sendToCarrybot(String message) {
+        bluetoothThread.write(message);
     }
 }

@@ -69,7 +69,9 @@
     <string name="gps_network_not_enabled">El GPS no está activo</string>
     <string name="button_turn_on">Activar</string>
     <string name="app_name">Carrybot Restaurant</string>
+    <string name="socket_failed">Falló la conexión</string>
 
     <!-- Properties -->
     <string name="properties_bluetooth_address">bluetooth_address</string>
+    <string name="properties_bluetooth_create_bond">createBond</string>
 </resources>
