@@ -10,12 +10,12 @@ Proyecto de IoT con Arduino y Android para Sistemas Operativos Avanzados (UNLaM)
 - Kaucic, Florencia
 - Martinez, Sebastian
 - Palopoli, Juan Jose
-- Porro, Diego
 
 ### Directorios
 - [Sistema Embebido](https://github.com/FlorKaucic/SOA-CarryBot/tree/master/sistema-embebido "Subdirectorio del SE en GitHub")
 - [Android](https://github.com/FlorKaucic/SOA-CarryBot/tree/master/android "Subdirectorio de la app de Android en GitHub")
 - [Informe Final](https://github.com/FlorKaucic/SOA-CarryBot/tree/master/informe-final "Subdirectorio del informe final en GitHub")
+- [Paper HPC](https://github.com/FlorKaucic/SOA-CarryBot/tree/master/paper-hpc "Subdirectorio del paper de HPC en GitHub")
 
 ## Commits
 Los commits tienen declarado qué contexto modifican al principio del mensaje de commit.
@@ -25,6 +25,7 @@ Este __contexto__ puede ser:
 - `[ardu] : cambios en el código del sistema embebido arduino`
 - `[andr] : cambios en el código de la app de android`
 - `[docs] : cambios en el informe final`
+- `[phpc] : cambios en el paper de HPC`
 
 El objetivo es simplificar la obtención de un historial de cada parte por separado.
 
