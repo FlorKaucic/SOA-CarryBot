@@ -45,6 +45,7 @@ public class WaitingActivity extends AppCompatActivity {
         sensorManager.unregisterListener(lightSensorListener);
         Intent intent = new Intent(this, OrdersActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override
@@ -74,7 +75,6 @@ public class WaitingActivity extends AppCompatActivity {
         public void onSensorChanged(SensorEvent event) {
             if(event.sensor.getType() == Sensor.TYPE_LIGHT){
                 float lightLevel = event.values[0];
-                ((TextView)findViewById(R.id.waitingText)).setText("Level: "+lightLevel+String.valueOf(lightLevel>LIGHT_LEVEL_THRESHOLD));
                 if(lightLevel > LIGHT_LEVEL_THRESHOLD) {
                     goToOrderList(findViewById(R.id.goToOrderListButton));
                 }
