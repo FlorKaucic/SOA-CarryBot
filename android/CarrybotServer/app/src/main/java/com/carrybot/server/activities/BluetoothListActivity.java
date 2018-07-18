@@ -90,6 +90,7 @@ public class BluetoothListActivity extends AppCompatActivity {
                             bluetoothThread.start();
                             ServerData.setBluetoothThread(bluetoothThread);
                             ServerData.sendToCarrybot("PING\r\n");
+                            goToSettingsActivity();
                         } catch (Exception e) {
                             try {
                                 e.printStackTrace();
@@ -100,6 +101,7 @@ public class BluetoothListActivity extends AppCompatActivity {
                                 bluetoothThread.start();
                                 ServerData.setBluetoothThread(bluetoothThread);
                                 ServerData.sendToCarrybot("PING\r\n");
+                                goToSettingsActivity();
                             } catch (Exception er) {
                                 er.printStackTrace();
                                 Log.e("BLUETOOTH 3", er.getMessage());
@@ -206,6 +208,7 @@ public class BluetoothListActivity extends AppCompatActivity {
                     bluetoothThread.start();
                     ServerData.setBluetoothThread(bluetoothThread);
                     ServerData.sendToCarrybot("PING\r\n");
+                    goToSettingsActivity();
                 } catch (IOException e) {
                     Toast.makeText(BluetoothListActivity.this, R.string.socket_failed, Toast.LENGTH_SHORT).show();
                 }
