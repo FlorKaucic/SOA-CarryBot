@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:onClick="goToOrderList"
+    android:orientation="vertical"
+    tools:context=".activities.WaitingActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:adjustViewBounds="false"
+        android:background="@color/colorPrimary"
+        android:cropToPadding="false"
+        android:padding="10dp"
+        app:srcCompat="@drawable/lightbulb" />
+
+    <TextView
+        android:id="@+id/waitingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/waiting_text"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/goToOrderListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="goToOrderList"
+        android:text="@string/waiting_skip_button_text"
+        android:textAlignment="center" />
+</LinearLayout>
