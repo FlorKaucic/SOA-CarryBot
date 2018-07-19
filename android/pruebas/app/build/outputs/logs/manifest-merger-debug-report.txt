@@ -1,0 +1,182 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\dd0f81a7eeef8105e91f3dfffc9715fa\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\2b5dea037b0b9365d86f31a735fdf38b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e2e86744aa94ec9eae83b6b73768aae5\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\747ef815c8ec5c4feb6cd37890c6c9e8\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\3061e8bac35823679432831712798c35\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\aaa6b7abe27c09d9c94eebbb5d3bea1d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e51ed8d28dc3840aedb8fa8c407abc8d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\8ff53b39ea44ffe4176c3ef1bd06664e\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\15b68cef09c350b6cb6fd6b3bde0d554\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:17:1-30:12
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+	package
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:3:5-41
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:1-38:12
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:5:5-31:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\dd0f81a7eeef8105e91f3dfffc9715fa\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\dd0f81a7eeef8105e91f3dfffc9715fa\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\2b5dea037b0b9365d86f31a735fdf38b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\2b5dea037b0b9365d86f31a735fdf38b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e2e86744aa94ec9eae83b6b73768aae5\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e2e86744aa94ec9eae83b6b73768aae5\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\747ef815c8ec5c4feb6cd37890c6c9e8\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\747ef815c8ec5c4feb6cd37890c6c9e8\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\3061e8bac35823679432831712798c35\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\3061e8bac35823679432831712798c35\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\aaa6b7abe27c09d9c94eebbb5d3bea1d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\aaa6b7abe27c09d9c94eebbb5d3bea1d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e51ed8d28dc3840aedb8fa8c407abc8d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e51ed8d28dc3840aedb8fa8c407abc8d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\8ff53b39ea44ffe4176c3ef1bd06664e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\8ff53b39ea44ffe4176c3ef1bd06664e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\15b68cef09c350b6cb6fd6b3bde0d554\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\15b68cef09c350b6cb6fd6b3bde0d554\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.carrybot.facu.pruebabt.MainActivity
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.carrybot.facu.pruebabt.DeviceListActivity
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:20:9-26:20
+	android:label
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:22:13-45
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:21:13-47
+intent-filter#action:name:android.intent.action.VIEW
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:23:13-25:29
+action#android.intent.action.VIEW
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:24:25-66
+activity#com.carrybot.facu.pruebabt.activity_comunicacion
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:29:9-68
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:29:19-56
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:32:5-68
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:32:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:33:5-74
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:33:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:34:5-81
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:34:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml:35:22-76
+uses-sdk
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\dd0f81a7eeef8105e91f3dfffc9715fa\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\dd0f81a7eeef8105e91f3dfffc9715fa\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\2b5dea037b0b9365d86f31a735fdf38b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\2b5dea037b0b9365d86f31a735fdf38b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e2e86744aa94ec9eae83b6b73768aae5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e2e86744aa94ec9eae83b6b73768aae5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\747ef815c8ec5c4feb6cd37890c6c9e8\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\747ef815c8ec5c4feb6cd37890c6c9e8\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\3061e8bac35823679432831712798c35\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\3061e8bac35823679432831712798c35\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\aaa6b7abe27c09d9c94eebbb5d3bea1d\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\aaa6b7abe27c09d9c94eebbb5d3bea1d\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e51ed8d28dc3840aedb8fa8c407abc8d\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e51ed8d28dc3840aedb8fa8c407abc8d\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\8ff53b39ea44ffe4176c3ef1bd06664e\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\8ff53b39ea44ffe4176c3ef1bd06664e\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\15b68cef09c350b6cb6fd6b3bde0d554\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\15b68cef09c350b6cb6fd6b3bde0d554\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Facu\AndroidStudioProjects\SOA-CarryBot\android\pruebas\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\2b5dea037b0b9365d86f31a735fdf38b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\2b5dea037b0b9365d86f31a735fdf38b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e2e86744aa94ec9eae83b6b73768aae5\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e2e86744aa94ec9eae83b6b73768aae5\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\747ef815c8ec5c4feb6cd37890c6c9e8\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\747ef815c8ec5c4feb6cd37890c6c9e8\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\3061e8bac35823679432831712798c35\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\3061e8bac35823679432831712798c35\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\aaa6b7abe27c09d9c94eebbb5d3bea1d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\aaa6b7abe27c09d9c94eebbb5d3bea1d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e51ed8d28dc3840aedb8fa8c407abc8d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e51ed8d28dc3840aedb8fa8c407abc8d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\8ff53b39ea44ffe4176c3ef1bd06664e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\8ff53b39ea44ffe4176c3ef1bd06664e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\15b68cef09c350b6cb6fd6b3bde0d554\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\15b68cef09c350b6cb6fd6b3bde0d554\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d33a4d60f8f3d941a6dba796aefdeefd\AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Facu\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6576cfb9a36972c8653e636bc182b819\AndroidManifest.xml:26:13-58

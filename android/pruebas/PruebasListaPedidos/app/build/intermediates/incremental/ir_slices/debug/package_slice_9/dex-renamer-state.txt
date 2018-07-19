@@ -1,0 +1,4 @@
+#Sun Jun 24 01:26:31 ART 2018
+base.0=C\:\\Users\\Facu\\AndroidStudioProjects\\SOA-CarryBot\\android\\pruebas\\PruebasListaPedidos\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+path.0=classes.dex
+renamed.0=classes.dex
